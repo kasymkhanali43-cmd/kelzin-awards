@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<title>Kelzin Group Awards 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Тёмный вечер: фото на весь экран, крупная типографика по левому краю, терракота только в акцентах */
+:root{
+  --night:#13100e;
+  --night-2:#1c1714;
+  --paper:#f3eee7;
+  --dim:rgba(243,238,231,.62);
+  --faint:rgba(243,238,231,.16);
+  --terra:#c0602f;
+  --terra-hi:#d4733f;
+  --error:#ff8a73;
+  --sans:'Gotham Pro','Gotham','Montserrat','Helvetica Neue',Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--night);color:var(--paper);font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:1px solid var(--terra-hi);outline-offset:4px}
+
+.band{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin:0 auto}
+.label{font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--terra-hi)}
+.h2{margin:0;font-weight:600;font-size:clamp(30px,7.2vw,64px);line-height:1.02;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance}
+section{padding-block:clamp(72px,12vw,128px)}
+.sec-head{display:grid;gap:18px;margin-bottom:clamp(36px,6vw,56px)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 28px;background:var(--terra);color:#fff;border:0;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--terra-hi)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.btn.ghost{background:transparent;border:1px solid var(--faint);color:var(--paper)}
+.btn.ghost:hover{border-color:var(--paper)}
+
+/* ---------- обложка ---------- */
+.hero{position:relative;min-height:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;padding-block:0;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%;animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes settle{from{transform:scale(1.07)}to{transform:none}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,16,14,.55) 0%,rgba(19,16,14,0) 24%,rgba(19,16,14,0) 42%,rgba(19,16,14,.82) 74%,var(--night) 100%)}
+.hero .top,.hero > .bottom{position:relative;z-index:1}
+.hero .top{display:flex;justify-content:space-between;align-items:center;padding-top:20px;font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase}
+.lang{display:flex;gap:2px;border:1px solid var(--faint);padding:2px}
+.lang button{background:none;border:0;padding:7px 10px;font-size:11px;font-weight:600;letter-spacing:.2em;color:var(--dim);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--paper);color:var(--night)}
+.hero .bottom{margin-top:auto;padding-bottom:clamp(28px,6vw,56px);display:grid;gap:22px}
+.hero h1{margin:0;font-weight:600;font-size:clamp(46px,13.5vw,132px);line-height:.9;letter-spacing:-.02em;text-transform:uppercase}
+.hero h1 span{display:block}
+.hero h1 .yr{color:var(--terra-hi)}
+.hero .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 28px}
+.hero .when{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.hero .sub{margin:0;font-size:15px;color:var(--dim);max-width:34ch}
+
+/* ---------- о вечере ---------- */
+.about .wrap{display:grid;gap:28px}
+.about p{margin:0;font-size:clamp(22px,4.6vw,40px);font-weight:300;line-height:1.3;letter-spacing:-.01em;max-width:24ch;text-wrap:pretty}
+.about p b{font-weight:600}
+@media (min-width:860px){.about .wrap{grid-template-columns:220px 1fr}.about p{max-width:26ch}}
+
+/* ---------- программа ---------- */
+.program{background:var(--night-2)}
+.cards{display:grid;gap:14px}
+.card{position:relative;overflow:hidden;min-height:clamp(300px,60vw,440px);display:flex;align-items:flex-end;background:#0d0b0a}
+.card img,.card .spot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.04)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,11,10,0) 35%,rgba(13,11,10,.9) 100%)}
+.card .txt{position:relative;z-index:1;padding:24px;display:grid;gap:8px}
+.card h3{margin:0;font-size:clamp(20px,4.6vw,26px);font-weight:600;line-height:1.15;text-transform:uppercase;letter-spacing:.01em}
+.card p{margin:0;color:var(--dim);max-width:36ch}
+.spot{background:radial-gradient(ellipse 30% 46% at 50% 92%,rgba(243,238,231,.28),rgba(243,238,231,0) 70%),#0d0b0a}
+.spot::before{content:"";position:absolute;left:50%;top:-5%;width:56%;height:100%;transform:translateX(-50%);background:linear-gradient(180deg,rgba(243,238,231,.24),rgba(243,238,231,0) 92%);clip-path:polygon(46% 0,54% 0,100% 100%,0 100%)}
+.spot b{position:absolute;left:50%;top:34%;transform:translate(-50%,-50%);font-size:clamp(90px,18vw,150px);font-weight:300;line-height:1;color:var(--paper)}
+@media (min-width:860px){
+  .cards{grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto}
+  .card.big{grid-row:span 2;min-height:100%}
+}
+
+/* ---------- когда и где ---------- */
+.where .grid{display:grid;gap:36px}
+.bigdate{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 26px;font-weight:600;font-size:clamp(64px,19vw,168px);line-height:.85;letter-spacing:-.04em}
+.bigdate .t{color:var(--terra-hi)}
+.facts{display:grid;gap:0;border-top:1px solid var(--faint)}
+.fact{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--faint)}
+.fact .k{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);padding-top:3px}
+.fact .v{font-size:17px;font-weight:400;min-width:0}
+.fact .v b{display:block;font-weight:600;font-size:19px;margin-bottom:2px}
+.where .hall{position:relative;aspect-ratio:16/9;overflow:hidden}
+.where .hall img{width:100%;height:100%;object-fit:cover}
+@media (min-width:860px){.where .grid{grid-template-columns:1fr 1fr;gap:56px;align-items:end}}
+
+/* ---------- дресс-код ---------- */
+.dress{background:var(--night-2)}
+.dress .wrap{display:grid;gap:24px}
+.dress p{margin:0;font-size:clamp(18px,3.8vw,24px);line-height:1.5;max-width:40ch}
+.mood{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:12px;padding-bottom:6px}
+.mood img{flex:none;width:min(64vw,260px);aspect-ratio:3/4;object-fit:cover;scroll-snap-align:start}
+
+/* ---------- регистрация ---------- */
+.rsvp .wrap{display:grid;gap:40px}
+.rsvp .lead{margin:0;color:var(--dim);font-size:16px;max-width:34ch}
+form{display:grid;gap:26px}
+.field{display:grid;gap:6px}
+.field label{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+.field input{width:100%;min-height:52px;padding:10px 0;border:0;border-bottom:1px solid var(--faint);background:transparent;font-size:19px;font-weight:400;color:var(--paper);border-radius:0;transition:border-color .2s}
+.field input::placeholder{color:rgba(243,238,231,.28)}
+.field input:focus{outline:none;border-bottom-color:var(--terra-hi)}
+.field.bad input{border-bottom-color:var(--error)}
+.field .err{font-size:13px;color:var(--error)}
+.field .err:empty{display:none}
+.note{margin:0;font-size:13px;color:var(--dim)}
+form .btn{width:100%}
+.btn[disabled]{opacity:.6;cursor:progress}
+.form-error{margin:0;color:var(--error);font-size:14px}
+.thanks{display:grid;gap:14px;align-content:start}
+.thanks .t{margin:0;font-size:clamp(30px,7vw,52px);font-weight:600;line-height:1.05;text-transform:uppercase;letter-spacing:-.01em}
+.thanks p{margin:0;font-size:18px;color:var(--dim)}
+@media (min-width:860px){.rsvp .wrap{grid-template-columns:1fr 1fr;gap:80px;align-items:start}}
+
+/* ---------- подвал ---------- */
+footer{padding-block:40px calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--faint)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:13px;color:var(--dim)}
+footer .mark{font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--paper)}
+</style>
+
+<header class="band hero">
+  <img src="img/hero.jpg" alt="Вход в Gorky Park Residence зимним вечером, гости поднимаются по ступеням">
+  <div class="wrap top" style="width:100%"><span>Kelzin Group</span><div class="lang" role="group" aria-label="Тіл / Язык"><button type="button" data-lang="kz" aria-pressed="true">ҚАЗ</button><button type="button" data-lang="ru" aria-pressed="false">РУС</button></div></div>
+  <div class="wrap bottom" style="width:100%">
+    <h1><span>Kelzin Group</span><span>Awards <span class="yr" style="display:inline">2026</span></span></h1>
+    <p class="sub" data-i18n="sub"></p>
+    <div class="row">
+      <div class="when"><span data-i18n="date"></span><span>18:00</span><span>Gorky Park Residence</span></div>
+      <a class="btn" href="#rsvp"><span data-i18n="cta"></span>
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<section class="band about">
+  <div class="wrap">
+    <div class="label" data-i18n="aboutL"></div>
+    <div style="display:grid;gap:22px">
+      <p><b data-i18n="about1"></b></p>
+      <p data-i18n="about2"></p>
+    </div>
+  </div>
+</section>
+
+<section class="band program">
+  <div class="wrap">
+    <div class="sec-head"><div class="label" data-i18n="progL"></div><h2 class="h2" data-i18n="progH"></h2></div>
+    <div class="cards">
+      <article class="card big">
+        <img src="img/stage.jpg" alt="Сцена со световой фермой" loading="lazy">
+        <div class="txt"><h3 data-i18n="c1h"></h3><p data-i18n="c1p"></p></div>
+      </article>
+      <article class="card">
+        <img src="img/banquet.jpg" alt="Гости за банкетными столами" loading="lazy">
+        <div class="txt"><h3 data-i18n="c2h"></h3></div>
+      </article>
+      <article class="card">
+        <div class="spot" role="img" aria-label="Луч прожектора на пустой сцене"><b>?</b></div>
+        <div class="txt"><h3 data-i18n="c3h"></h3><p data-i18n="c3p"></p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band where">
+  <div class="wrap">
+    <div class="sec-head"><div class="label" data-i18n="whereL"></div></div>
+    <div class="grid">
+      <div style="display:grid;gap:32px">
+        <div class="bigdate"><span>20.12</span><span class="t">18:00</span></div>
+        <div class="facts">
+          <div class="fact"><span class="k" data-i18n="placeK"></span><span class="v"><b>Gorky Park Residence</b><span data-i18n="addr"></span></span></div>
+          <div class="fact"><span class="k" data-i18n="parkK"></span><span class="v" data-i18n="park"></span></div>
+        </div>
+        <div><a class="btn ghost" href="https://2gis.kz/almaty/geo/70000001109133465/76.968293,43.263903" target="_blank" rel="noopener"><span data-i18n="gis"></span>
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+      </div>
+      <div class="hall"><img src="img/hall.jpg" alt="Банкетный зал Gorky Park Residence" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band dress">
+  <div class="wrap">
+    <div class="sec-head" style="margin:0"><div class="label" data-i18n="dressL"></div><h2 class="h2" data-i18n="dressH"></h2></div>
+    <p data-i18n="dress"></p>
+    <div class="mood" id="mood" hidden></div>
+  </div>
+</section>
+
+<section class="band rsvp" id="rsvp">
+  <div class="wrap">
+    <div class="sec-head" style="margin:0">
+      <div class="label" data-i18n="rsvpL"></div>
+      <h2 class="h2" data-i18n="rsvpH"></h2>
+      <p class="lead" data-i18n="rsvpP"></p>
+    </div>
+    <div>
+      <form id="form" novalidate>
+        <div class="field"><label for="f-name" data-i18n="fName"></label><input id="f-name" name="name" autocomplete="name" required><span class="err"></span></div>
+        <div class="field"><label for="f-phone" data-i18n="fPhone"></label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required><span class="err"></span></div>
+        <div class="field"><label for="f-shop" data-i18n="fShop"></label><input id="f-shop" name="shop" autocomplete="organization" required><span class="err"></span></div>
+        <div class="field"><label for="f-city" data-i18n="fCity"></label><input id="f-city" name="city" autocomplete="address-level2" required><span class="err"></span></div>
+        <p class="note" data-i18n="note"></p>
+        <p class="form-error" id="formError" hidden data-i18n="sendErr"></p>
+        <button class="btn" id="submit" type="submit" data-i18n="submit"></button>
+      </form>
+      <div class="thanks" id="thanks" hidden>
+        <p class="t" id="thanksTitle">Спасибо!</p>
+        <p data-i18n="thanks"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="wrap">
+    <span class="mark">Kelzin Group Awards 2026</span>
+    <span data-i18n="footer"></span>
+  </div>
+</footer>
+
+<script>
+/* Адрес веб-приложения Google Apps Script, которое пишет строки в таблицу.
+   Пока пусто, форма работает в режиме просмотра и ничего не отправляет. */
+const SHEET_ENDPOINT = '';
+const T = {
+  kz: {
+    sub:'Kelzin Group серіктестеріне арналған жабық кеш', date:'20 желтоқсан', cta:'Қатысуды растау',
+    aboutL:'Кеш туралы', about1:'Бұл жыл - бірге жүріп өткен жол.',
+    about2:'Осы кеште жылдың қорытындысын бірге шығарып, ортақ табыстарымызды тойлаймыз. Осы жолда бізбен иық тіресіп, үлкен үлес қосқан серіктестерімізге шынайы алғысымызды айтқымыз келеді.',
+    progL:'Бағдарлама', progH:'Кеште сізді не күтеді',
+    c1h:'Жыл қорытындысы және марапаттау', c1p:'Жылдың қорытындысын шығарып, серіктестерімізді түрлі номинациялар бойынша марапаттаймыз.',
+    c2h:'Банкет пен фуршет', c3h:'Ерекше қонақ', c3p:'Кештің жұлдызы әзірге құпия. Кім екенін кеште өз көзіңізбен көресіз.',
+    whereL:'Уақыты мен орны', placeK:'Орны', addr:'Алматы қ., Гоголь к-сі, 1, Горький атындағы саябақ',
+    parkK:'Көлік тұрағы', park:'Ғимараттан 210 м жерде, саябақ арқылы жаяу 3-4 минут', gis:'2ГИС-те ашу',
+    dressL:'Дресс-код', dressH:'Кешкі стиль', dress:'Ер азаматтар - костюммен, ханымдар - кешкі көйлекпен. Кеш салтанатты түрде өтеді, сондықтан киіміңізді алдын ала таңдап қойыңыз.',
+    rsvpL:'Тіркелу', rsvpH:'Келетініңізді растаңыз', rsvpP:'Сізге арнап орын дайындап қоюымыз үшін.',
+    fName:'Аты-жөніңіз', fPhone:'Телефон нөміріңіз', fShop:'Дүкеніңіздің атауы', fCity:'Қалаңыз',
+    note:'Шақыру жеке беріледі және бір қонаққа арналған.', submit:'Кешке келемін', sending:'Жіберілуде…',
+    sendErr:'Жіберу сәтсіз аяқталды. Интернетті тексеріп, қайта көріңіз.',
+    eName:'Аты-жөніңізді жазыңыз', ePhone:'Нөмір +7-ден кейін 10 цифрдан тұруы керек', eShop:'Дүкеніңіздің атауын жазыңыз', eCity:'Қалаңызды жазыңыз',
+    thanksT:n=>'Рақмет, '+n+'!', thanks:'Сіз қонақтар тізіміне енгізілдіңіз. Kelzin Group Awards 2026 кешінде кездескенше!',
+    footer:'Сұрақтарыңыз болса, Kelzin Group-тағы менеджеріңізге хабарласыңыз.'
+  },
+  ru: {
+    sub:'Закрытый вечер для партнёров Kelzin Group', date:'20 декабря', cta:'Подтвердить участие',
+    aboutL:'О вечере', about1:'Этот год мы прошли вместе.',
+    about2:'В этот вечер мы подведём итоги, отпразднуем общие достижения и скажем спасибо партнёрам, которые стали большой и важной частью этого пути.',
+    progL:'Программа', progH:'Что будет на вечере',
+    c1h:'Итоги года и награждение', c1p:'Подведём итоги года и наградим партнёров в разных номинациях.',
+    c2h:'Банкет и фуршет', c3h:'Особый гость', c3p:'Звезда вечера останется сюрпризом. Кто это, узнаете на месте.',
+    whereL:'Когда и где', placeK:'Место', addr:'Алматы, ул. Гоголя, 1, ЦПКиО (парк Горького)',
+    parkK:'Парковка', park:'В 210 м от здания, через парк 3-4 минуты пешком', gis:'Открыть в 2ГИС',
+    dressL:'Дресс-код', dressH:'Вечерний', dress:'Мужчины - в костюмах, дамы - в вечерних нарядах. Вечер торжественный, продумайте образ заранее.',
+    rsvpL:'Регистрация', rsvpH:'Подтвердите участие', rsvpP:'Чтобы мы подготовили для вас место.',
+    fName:'Имя и фамилия', fPhone:'Номер телефона', fShop:'Название магазина', fCity:'Город',
+    note:'Приглашение именное, на одного гостя.', submit:'Буду на вечере', sending:'Отправляем…',
+    sendErr:'Не получилось отправить. Проверьте интернет и попробуйте ещё раз.',
+    eName:'Напишите имя и фамилию', ePhone:'Номер должен содержать 10 цифр после +7', eShop:'Напишите название магазина', eCity:'Напишите город',
+    thanksT:n=>'Спасибо, '+n+'!', thanks:'Вы в списке гостей. До встречи на Kelzin Group Awards 2026!',
+    footer:'По всем вопросам свяжитесь с вашим менеджером в Kelzin Group.'
+  }
+};
+let LANG = 'kz';
+try { const s = localStorage.getItem('kga-lang'); if (s === 'ru' || s === 'kz') LANG = s; } catch(e){}
+function applyLang(l){
+  LANG = l;
+  document.documentElement.lang = l === 'kz' ? 'kk' : 'ru';
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = T[l][el.dataset.i18n]; });
+  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
+  document.querySelectorAll('.field.bad').forEach(f => { const i = f.querySelector('input'); const r = fields.find(x => x[0] === i.id); if (r) check(r[0], r[1]); });
+  try { localStorage.setItem('kga-lang', l); } catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+
+/* Мудборд дресс-кода: имена файлов в папке img, лента появится, когда они будут */
+const MOOD = ['dc-1.jpg','dc-w2.jpg','dc-2.jpg','dc-w1.jpg','dc-3.jpg','dc-w3.jpg','dc-4.jpg'];
+if (MOOD.length){
+  const m = document.getElementById('mood');
+  MOOD.forEach(src => { const i = new Image(); i.src = 'img/' + src; i.alt = 'Пример образа'; i.loading = 'lazy'; m.appendChild(i); });
+  m.hidden = false;
+}
+
+const $ = id => document.getElementById(id);
+const phone = $('f-phone');
+
+function digits(v){
+  let d = v.replace(/\D/g,'');
+  if (d.startsWith('8')) d = '7' + d.slice(1);
+  if (d && !d.startsWith('7')) d = '7' + d;
+  return d.slice(0,11);
+}
+function formatPhone(d){
+  if (!d) return '';
+  const p = d.slice(1);
+  let out = '+7';
+  if (p.length) out += ' (' + p.slice(0,3);
+  if (p.length >= 3) out += ')';
+  if (p.length > 3) out += ' ' + p.slice(3,6);
+  if (p.length > 6) out += '-' + p.slice(6,8);
+  if (p.length > 8) out += '-' + p.slice(8,10);
+  return out;
+}
+phone.addEventListener('input', () => { phone.value = formatPhone(digits(phone.value)); });
+phone.addEventListener('focus', () => { if (!phone.value) phone.value = '+7 ('; });
+phone.addEventListener('blur', () => { if (digits(phone.value).length <= 1) phone.value = ''; });
+
+const fields = [
+  ['f-name',  v => v.trim().length >= 2 || T[LANG].eName],
+  ['f-phone', v => digits(v).length === 11 || T[LANG].ePhone],
+  ['f-shop',  v => v.trim().length >= 1 || T[LANG].eShop],
+  ['f-city',  v => v.trim().length >= 2 || T[LANG].eCity]
+];
+function check(id, rule){
+  const el = $(id), res = rule(el.value), box = el.closest('.field');
+  const msg = res === true ? '' : res;
+  box.classList.toggle('bad', !!msg);
+  box.querySelector('.err').textContent = msg;
+  return !msg;
+}
+applyLang(LANG);
+fields.forEach(([id, rule]) => $(id).addEventListener('blur', () => { if ($(id).value) check(id, rule); }));
+
+$('form').addEventListener('submit', async e => {
+  e.preventDefault();
+  $('formError').hidden = true;
+  const ok = fields.map(([id, rule]) => check(id, rule));
+  if (ok.includes(false)){ $(fields[ok.indexOf(false)][0]).focus(); return; }
+
+  const data = {
+    name: $('f-name').value.trim(),
+    phone: formatPhone(digits(phone.value)),
+    shop: $('f-shop').value.trim(),
+    city: $('f-city').value.trim(),
+    lang: LANG
+  };
+  const btn = $('submit');
+  btn.disabled = true; btn.textContent = T[LANG].sending;
+  try {
+    if (SHEET_ENDPOINT){
+      await fetch(SHEET_ENDPOINT, { method:'POST', mode:'no-cors', body:new URLSearchParams(data) });
+    }
+    $('thanksTitle').textContent = T[LANG].thanksT(data.name.split(/\s+/)[0]);
+    $('form').hidden = true;
+    $('thanks').hidden = false;
+    $('thanks').scrollIntoView({ block:'center' });
+  } catch (err) {
+    $('formError').hidden = false;
+    btn.disabled = false; btn.textContent = T[LANG].submit;
+  }
+});
+</script>
+
+</body>
+</html>
